@@ -1,0 +1,34 @@
+<div class="main">
+	<div id="Singup">
+		<div class="container">
+			<div id="Singup-row" class="row justify-content-center align-items-center">
+				<div id="login-column" class="col-md-6">
+					<div id="signup-box" class="col-md-12">
+						<h3 class="text-center text-info py-3">Signup</h3> 
+						<form [formGroup]="registerForm">
+							<div class="form-group">
+								<label for="firstName">First Name</label>
+								<input type="text" formControlName="firstName" class="form-control"/>
+							</div>
+							<div class="form-group">
+								<label for="lastName">Last Name</label>
+								<input type="text" formControlName="lastName" class="form-control"/>
+							</div>
+							<div class="form-group">
+								<label for="username">Username</label>
+								<input type="text" formControlName="username" class="form-control"/>
+							</div>
+							<div class="form-group">
+								<label for="password">Password</label>
+								<input type="password" formControlName="password" class="form-control"/>
+							</div>
+							<div class="form-group">
+								<button [disabled]="loading" class="btn btn-primary" (click)="Register()">Register</button> <a [routerLink]="['/SignIn']" class="btn btn-link">Cancel</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
